@@ -1,0 +1,18 @@
+[project]
+name = "xsuite-cas-tutorial"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "xplt>=0.12.6",
+    "xsuite>=0.67.2",
+]
+
+[dependency-groups]
+dev = [
+    "marimo[lsp]>=0.25.2",
+]
+
+[tool.marimo.language_servers.pylsp]
+enabled = true               # Enable/disable pylsp
+enable_mypy = false          # Type checking with mypy (enabled by default, if installed)
+enable_ruff = true           # Linting with ruff (enabled by default, if installed)
